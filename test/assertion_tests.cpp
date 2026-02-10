@@ -36,7 +36,15 @@ TEST(assertion_handler, set_get_and_invoke)
   EXPECT_EQ(previous, nullptr);
 
   reset_capture();
+
+  // Capture the stderr output.
+  testing::internal::CaptureStderr();
+
   twbase::assertion("file.cpp", 123, "func", "msg");
+
+  // Get the captured stderr output and verify it.
+  std::string captured_stderr = testing::internal::GetCapturedStderr();
+  EXPECT_EQ(captured_stderr, "file.cpp:123: internal check failed in 'func': 'msg'\n");
 
   EXPECT_EQ(g_call_count.load(std::memory_order_relaxed), 1);
   EXPECT_STREQ(g_file_name, "file.cpp");
@@ -48,3 +56,4 @@ TEST(assertion_handler, set_get_and_invoke)
   EXPECT_EQ(removed, test_handler);
   EXPECT_EQ(twbase::get_assertion_handler(), nullptr);
 }
+

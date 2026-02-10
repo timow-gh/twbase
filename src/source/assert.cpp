@@ -16,7 +16,6 @@ void assertion(const char* fileName, int line, const char* funcName, const char*
   if (handler)
   {
     handler(fileName, line, funcName, message);
-    return;
   }
 
   std::fprintf(stderr, "%s:%d: internal check failed in '%s': '%s'\n", fileName, line, funcName, message);
