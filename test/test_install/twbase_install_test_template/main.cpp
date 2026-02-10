@@ -1,7 +1,7 @@
 #include "twbase/twbase.hpp"
-#include <gtest/gtest.h>
 
-TEST(example_library, libraryFunction)
+int main()
 {
   twbase::libraryFunction(42);
+  return 0;
 }

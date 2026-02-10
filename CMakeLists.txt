@@ -10,7 +10,7 @@ if (NOT CPM_SOURCE_CACHE AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/CPMSourceVariab
     include(CPMSourceVariable.cmake)
 endif ()
 
-project(cpplib
+project(twbase
         VERSION 0.0.0
         LANGUAGES CXX)
 

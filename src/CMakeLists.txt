@@ -1,15 +1,15 @@
 include(GNUInstallDirs)
 
-set(TARGET_NAME cpplib)
+set(TARGET_NAME twbase)
 add_library(${TARGET_NAME})
 
 target_sources(${TARGET_NAME}
         PRIVATE
-        source/cpplib.cpp
+        source/twbase.cpp
         PUBLIC
         FILE_SET HEADERS
         BASE_DIRS include
-        FILES include/cpplib/cpplib.hpp
+        FILES include/twbase/twbase.hpp
 )
 
 set_target_properties(${TARGET_NAME}

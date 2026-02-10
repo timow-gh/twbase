@@ -1,4 +1,4 @@
-set(test_target "cpplib")
+set(test_target "twbase")
 set(${test_target}_TEST_INSTALL_DIR "${CMAKE_CURRENT_BINARY_DIR}/${test_target}_install_dir")
 set(${test_target}_TEST_SOURCE_DIR "${CMAKE_CURRENT_BINARY_DIR}/${test_target}_use_install_test")
 set(${test_target}_TEMPLATE_PROJECT_DIR_NAME "${test_target}_install_test_template")
@@ -91,4 +91,4 @@ add_custom_target(test_install_clean
         COMMAND ${CMAKE_COMMAND} -E rm -Rf ${${test_target}_TEST_SOURCE_DIR}
 )
 
-add_test(NAME TestcpplibInstall COMMAND ${CMAKE_COMMAND} --build . --target test_install)
+add_test(NAME TesttwbaseInstall COMMAND ${CMAKE_COMMAND} --build . --target test_install)
