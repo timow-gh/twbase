@@ -14,4 +14,5 @@ function(create_test testName)
 endfunction()
 
 create_test(assertion_tests)
+create_test(lib_test)
 
