@@ -1,7 +1,7 @@
 #include "twbase/twbase.hpp"
 #include <iostream>
 
-namespace twbase
+namespace TWBASE_NAMESPACE
 {
 
 void libraryFunction(int value)

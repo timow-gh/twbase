@@ -10,6 +10,7 @@ target_sources(${TARGET_NAME}
         FILE_SET HEADERS
         BASE_DIRS include
         FILES include/twbase/twbase.hpp
+        include/twbase/config.hpp
 )
 
 set_target_properties(${TARGET_NAME}
