@@ -5,16 +5,15 @@ add_library(${TARGET_NAME})
 
 target_sources(${TARGET_NAME}
         PRIVATE
-        source/twbase.cpp
         source/assert.cpp
         PUBLIC
         FILE_SET HEADERS
         BASE_DIRS include
-        FILES 
+        FILES
+        include/twbase/allocator/stateless_allocator.hpp
         include/twbase/assert.hpp
         include/twbase/compiler.hpp
         include/twbase/config.hpp
-        include/twbase/twbase.hpp
 )
 
 set_target_properties(${TARGET_NAME}

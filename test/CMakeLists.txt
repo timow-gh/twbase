@@ -13,6 +13,8 @@ function(create_test testName)
     set_property(GLOBAL APPEND PROPERTY ${PROJECT_NAME}_COVERAGE_TESTS ${testName})
 endfunction()
 
+add_subdirectory(allocator_tests)
+
 create_test(assertion_tests)
-create_test(lib_test)
+
 
