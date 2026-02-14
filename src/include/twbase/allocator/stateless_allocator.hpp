@@ -16,16 +16,6 @@ namespace detail
 template <typename T>
 constexpr std::align_val_t alignment_v = static_cast<std::align_val_t>(std::max(alignof(T), alignof(std::max_align_t)));
 
-inline void* allocate(const std::size_t bytes)
-{
-  return ::operator new(bytes);
-}
-
-inline void deallocate(void* ptr) noexcept
-{
-  ::operator delete(ptr);
-}
-
 inline void* allocate_aligned(const std::size_t bytes, const std::align_val_t alignment)
 {
   return ::operator new(bytes, alignment);
